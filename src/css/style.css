@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --raisin-black: #2d2a32;
+    --cerulean: #2d728f;
+    --citrine: #ddd92a;
+    --maize: #eae151;
+    --baby-powder: #fafdf6;
+
+    background-color: var(--raisin-black);
+    color: var(--baby-powder);
+
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 7vh;
+    width: 80%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 12%;
+}
+
+.logo {
+    width: 54px;
+    filter: invert(86%) sepia(99%) saturate(463%) hue-rotate(356deg)
+        brightness(90%) contrast(92%);
+}
+
+#logo-text {
+    font-family: 'Dela Gothic One', sans-serif;
+    color: var(--citrine);
+    font-size: 48px;
+    width: 50vw;
+}
+
+.search-bar {
+    width: 20vw;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    background-color: var(--cerulean);
+    color: var(--baby-powder);
+    opacity: 0.5;
+    border: 1px solid var(--cerulean);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem 0.5rem;
+}
+
+.search-bar::placeholder {
+    color: var(--baby-powder);
+}
+
+.main-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 80%;
+}
+
+.weather-card {
+    display: grid;
+    grid-template-areas: 'city-name date-time' 'icon-temp stats';
+    gap: 1rem;
+    width: 80%;
+    height: 100%;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 10rem;
+}
+
+#city-name-area {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 7%;
+}
+
+#city-name-area:has(h1) {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+#country-flag {
+    height: 10vh;
+    border-radius: 1rem;
+}
+
+#date-time-area {
+    text-align: end;
+}
+
+#date-time-area:has(h1) {
+    font-size: 32px;
+}
+
+#date-time-area:has(h2) {
+    font-size: 24px;
+}
+
+#icon-temp-area {
+    display: grid;
+    grid-template-areas: 'icon .' 'icon temp' 'icon temp' 'icon feels-like' 'icon weather-type';
+    text-align: end;
+    align-items: center;
+}
+
+#icon-temp-area h1 {
+    font-size: 72px;
+    font-weight: 900;
+}
+
+#stats-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding-bottom: 3%;
+}
+
+.sad-face-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sad-face-div h1 {
+    font-size: 30vh;
+}
+
+.sad-face-div h2 {
+    font-size: 3vh;
+}
