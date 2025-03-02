@@ -37,7 +37,7 @@ const findCityByName = async (cityName) => {
     try {
         const [response] = await (
             await fetch(
-                `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
+                `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`
             )
         ).json();
 
